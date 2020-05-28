@@ -1,0 +1,2 @@
+rootProject.name='WallyPhotoApp'
+include ':app'
