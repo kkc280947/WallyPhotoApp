@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "339301327595",
+    "firebase_url": "https://wallyphotoapp.firebaseio.com",
+    "project_id": "wallyphotoapp",
+    "storage_bucket": "wallyphotoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339301327595:android:2bec11ba352ffdf65e14ae",
+        "android_client_info": {
+          "package_name": "r.c.wallyphotoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339301327595-4jm4j5a1boi7pckfm8f8petl6encq3ko.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "r.c.wallyphotoapp",
+            "certificate_hash": "36df173b3f4f8ddbe386953b58c9b05744009aa3"
+          }
+        },
+        {
+          "client_id": "339301327595-vondkdmjhr6cf3qkiv5njd64sggpdtsg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEzL6LKzEFCyZRZtWcTnfjs_WabOb7bqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339301327595-vondkdmjhr6cf3qkiv5njd64sggpdtsg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
