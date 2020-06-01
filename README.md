@@ -8,6 +8,9 @@ MVVM architecture is implemented in this project which helps in good code struct
 Dagger 2 is used for Dependency injection, helps in removing boiler plate code and saves from writing
 lot of unnecessaty initialization code.
 
+## Animation:
+For animation, Sharred transtition animation is used and ValueAnimator is used for transition.
+
 ## Network Module:
 Retrofit is used to implement REST API's in app for data transfer.
 
