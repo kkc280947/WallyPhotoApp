@@ -21,3 +21,6 @@ in notification panel of device.
 ## Image Processing:
 Glide is used to process images from server.
 
+```bash
+Share me SHA key of your device if you want install apk from your system. Otherwise it will give a error while log in.
+```
