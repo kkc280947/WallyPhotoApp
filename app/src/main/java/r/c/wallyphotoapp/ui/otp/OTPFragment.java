@@ -1,5 +1,6 @@
 package r.c.wallyphotoapp.ui.otp;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -15,6 +16,9 @@ import r.c.wallyphotoapp.base.BaseCallbackFragment;
 import r.c.wallyphotoapp.databinding.FragmentOtpBinding;
 import r.c.wallyphotoapp.ui.login.IActivityCallback;
 import r.c.wallyphotoapp.utils.CommonAppUtils;
+
+import static r.c.wallyphotoapp.utils.CommonAppUtils.isNetworkConnected;
+import static r.c.wallyphotoapp.utils.CommonAppUtils.showInternetError;
 
 public class OTPFragment extends BaseCallbackFragment<OTPViewModel, IActivityCallback> {
 
@@ -48,7 +52,14 @@ public class OTPFragment extends BaseCallbackFragment<OTPViewModel, IActivityCal
             return;
         }
         showProgressBar(true);
-        getActivityCallback().verifyPhoneNumberWithCode(code);
+        Context context = getContext();
+        if(context!=null){
+            if(isNetworkConnected(context)){
+                getActivityCallback().verifyPhoneNumberWithCode(code);
+            }else {
+                showInternetError(context,(dialog, which) -> dialog.dismiss());
+            }
+        }
     }
 
     private void showProgressBar(boolean show){

@@ -1,6 +1,7 @@
 package r.c.wallyphotoapp.ui.login;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -29,6 +30,9 @@ import r.c.wallyphotoapp.base.BaseCallbackFragment;
 import r.c.wallyphotoapp.databinding.FragmentLoginBinding;
 import r.c.wallyphotoapp.utils.CommonAppUtils;
 
+import static r.c.wallyphotoapp.utils.CommonAppUtils.isNetworkConnected;
+import static r.c.wallyphotoapp.utils.CommonAppUtils.showInternetError;
+
 public class LoginFragment extends BaseCallbackFragment<LoginViewModel,IActivityCallback> implements View.OnClickListener {
 
     public FragmentLoginBinding binding;
@@ -55,7 +59,14 @@ public class LoginFragment extends BaseCallbackFragment<LoginViewModel,IActivity
             if (!validatePhoneNumber()) {
                 return;
             }
-            startPhoneNumberVerification(Objects.requireNonNull(binding.editTextMobile.getText()).toString());
+            Context context = getContext();
+            if(context!=null){
+                if(isNetworkConnected(context)){
+                    startPhoneNumberVerification(Objects.requireNonNull(binding.editTextMobile.getText()).toString());
+                }else {
+                    showInternetError(context, (dialog, which) -> dialog.dismiss());
+                }
+            }
         }
     }
 

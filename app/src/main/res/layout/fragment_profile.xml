@@ -3,132 +3,140 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageBanner"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="@dimen/dp_8"
-            android:layout_marginStart="@dimen/dp_16"
-            android:layout_marginEnd="@dimen/dp_16"
-            android:layout_marginBottom="@dimen/dp_16"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_gallery"
-            app:layout_constraintDimensionRatio="16:9"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageBackArrow"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_8"
-            android:layout_marginTop="@dimen/dp_16"
-            android:background="@drawable/back_image_background"
-            android:layout_margin="@dimen/dp_8"
-            android:paddingTop="@dimen/dp_4"
-            android:paddingBottom="@dimen/dp_4"
-            android:src="@drawable/ic_left_arrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageBanner"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_gallery"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/textNameFromFirebase"
-            android:hint="@string/name_from_firebase"
-            android:imeOptions="actionNext"
-            style="@style/Base.Widget.AppCompat.EditText.ProfileText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            app:layout_constraintTop_toBottomOf="@+id/imageBanner" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/back_image_background"
+                android:paddingTop="@dimen/dp_4"
+                android:paddingBottom="@dimen/dp_4"
+                android:src="@drawable/ic_left_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/textPhoneFromFirebase"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:digits="1234567890"
-            android:maxLength="10"
-            android:imeOptions="actionDone"
-            style="@style/Base.Widget.AppCompat.EditText.ProfileText"
-            android:hint="@string/phone_number_from_firebase"
-            app:layout_constraintTop_toBottomOf="@+id/textNameFromFirebase" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/textNameFromFirebase"
+                style="@style/Base.Widget.AppCompat.EditText.ProfileText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_from_firebase"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/imageBanner" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/textGHI"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Base.Widget.AppCompat.EditText.ProfileText"
-            android:hint="@string/ghi"
-            android:enabled="false"
-            app:layout_constraintTop_toBottomOf="@+id/textPhoneFromFirebase" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/textPhoneFromFirebase"
+                style="@style/Base.Widget.AppCompat.EditText.ProfileText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="1234567890"
+                android:hint="@string/phone_number_from_firebase"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLength="10"
+                app:layout_constraintTop_toBottomOf="@+id/textNameFromFirebase" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/textGHL"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Base.Widget.AppCompat.EditText.ProfileText"
-            android:hint="@string/jhl"
-            android:enabled="false"
-            app:layout_constraintTop_toBottomOf="@+id/textGHI" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/textGHI"
+                style="@style/Base.Widget.AppCompat.EditText.ProfileText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/ghi"
+                app:layout_constraintTop_toBottomOf="@+id/textPhoneFromFirebase" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageCalendar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_8"
-            android:layout_marginStart="@dimen/dp_32"
-            android:layout_marginEnd="@dimen/dp_32"
-            android:layout_marginBottom="@dimen/dp_8"
-            android:src="@drawable/ic_calendar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textGHL" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/textGHL"
+                style="@style/Base.Widget.AppCompat.EditText.ProfileText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/jhl"
+                app:layout_constraintTop_toBottomOf="@+id/textGHI" />
 
-        <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/textLMN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            style="@style/Base.Widget.AppCompat.EditText.ProfileText"
-            android:hint="@string/lmn"
-            android:enabled="false"
-            app:layout_constraintTop_toBottomOf="@+id/imageCalendar" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageCalendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textGHL" />
 
-        <Button
-            android:id="@+id/buttonSave"
-            android:layout_marginTop="@dimen/dp_16"
-            android:layout_marginBottom="@dimen/dp_8"
-            android:layout_marginEnd="@dimen/dp_32"
-            android:layout_marginStart="@dimen/dp_32"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/black"
-            android:text="@string/save_data_to_firebase"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textLMN"
-            tools:targetApi="lollipop" />
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/textLMN"
+                style="@style/Base.Widget.AppCompat.EditText.ProfileText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/lmn"
+                app:layout_constraintTop_toBottomOf="@+id/imageCalendar" />
 
-        <Button
-            android:id="@+id/buttonSignOut"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@android:color/holo_red_dark"
-            android:text="@string/log_out"
-            android:layout_marginTop="@dimen/dp_8"
-            android:layout_marginBottom="@dimen/dp_8"
-            android:layout_marginEnd="@dimen/dp_32"
-            android:layout_marginStart="@dimen/dp_32"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonSave"
-            tools:targetApi="lollipop" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:backgroundTint="@android:color/black"
+                android:text="@string/save_data_to_firebase"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLMN"
+                tools:targetApi="lollipop" />
+
+            <Button
+                android:id="@+id/buttonSignOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_32"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:text="@string/log_out"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonSave"
+                tools:targetApi="lollipop" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </layout>
