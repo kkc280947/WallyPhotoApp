@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/profile_background">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/text_label_detail"
+            android:padding="@dimen/dp_8"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewDetail"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:textAlignment="center"
+            android:drawablePadding="4dp"
+            android:id="@+id/textViewDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/text_download_background"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/download"
+            android:textColor="@android:color/black"
+            android:drawableStart="@drawable/ic_file_download_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewDetail"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:alpha="0"
+            android:id="@+id/imageBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_8"
+            android:background="@drawable/back_image_background"
+            android:paddingStart="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_16"
+            android:paddingTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_4"
+            android:src="@drawable/ic_left_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/standard_text_that_swipes_up"
+            android:padding="@dimen/dp_16"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewDetail"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_16"
+            android:text="@string/fixed_text_which_swipes_from_left"
+            android:textSize="@dimen/text_size_large"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textOne"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

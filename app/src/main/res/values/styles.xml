@@ -1,11 +1,32 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="CardView.TextField" parent="CardView">
+        <item name="android:layout_marginStart">@dimen/dp_48</item>
+        <item name="android:layout_marginEnd">@dimen/dp_48</item>
+        <item name="cardElevation">@dimen/card_text_elevation</item>
+        <item name="cardCornerRadius">@dimen/card_text_field_corner_radius</item>
+    </style>
+
+    <style name="CardView.EditTextField" parent="CardView">
+        <item name="android:paddingEnd">@dimen/dp_16</item>
+        <item name="android:paddingStart">@dimen/dp_16</item>
+        <item name="android:paddingTop">@dimen/dp_12</item>
+        <item name="android:paddingBottom">@dimen/dp_12</item>
+    </style>
+
+    <style name="Base.Widget.AppCompat.EditText.ProfileText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:layout_marginStart">@dimen/dp_32</item>
+        <item name="android:layout_marginEnd">@dimen/dp_32</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:layout_marginBottom">@dimen/dp_8</item>
     </style>
 
 </resources>

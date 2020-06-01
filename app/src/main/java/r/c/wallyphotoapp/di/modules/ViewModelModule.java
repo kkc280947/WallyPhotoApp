@@ -12,7 +12,8 @@ import dagger.Binds;
 import dagger.MapKey;
 import dagger.Module;
 import dagger.multibindings.IntoMap;
-import r.c.wallyphotoapp.ui.main.MainViewModel;
+import r.c.wallyphotoapp.ui.photogallery.PhotoGalleryViewModel;
+import r.c.wallyphotoapp.ui.profile.ProfileViewModel;
 
 @Module
 public abstract class ViewModelModule {
@@ -27,6 +28,11 @@ public abstract class ViewModelModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(MainViewModel.class)
-    abstract ViewModel bindDrugsViewModel(MainViewModel mainViewModel);
+    @ViewModelKey(PhotoGalleryViewModel.class)
+    abstract ViewModel bindMainViewModel(PhotoGalleryViewModel photoGalleryViewModel);
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProfileViewModel.class)
+    abstract ViewModel bindProfileViewModel(ProfileViewModel profileViewModel);
 }

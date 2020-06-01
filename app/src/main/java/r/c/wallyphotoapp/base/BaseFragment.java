@@ -20,7 +20,7 @@ import r.c.wallyphotoapp.di.components.AppComponent;
  */
 public abstract class BaseFragment<T extends ViewModel> extends Fragment {
 
-	protected @Inject
+	@Inject
 	ViewModelFactory mViewModelFactory;
 
 	private T mViewModel;
@@ -63,11 +63,10 @@ public abstract class BaseFragment<T extends ViewModel> extends Fragment {
 		}
 	}
 
-	protected void finishActivity() {
-		Activity activity = getActivity();
-		if (activity != null) {
-			activity.finish();
-		}
-	}
-
+    protected void goBack() {
+        Activity activity = getActivity();
+        if(activity!=null){
+            activity.onBackPressed();
+        }
+    }
 }

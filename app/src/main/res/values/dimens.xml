@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  common dimens for margin and padding  -->
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_104">104dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+
+    <dimen name="text_size_small">10sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+
+    <dimen name="card_text_field_corner_radius">8dp</dimen>
+    <dimen name="card_text_elevation">4dp</dimen>
+
+</resources>

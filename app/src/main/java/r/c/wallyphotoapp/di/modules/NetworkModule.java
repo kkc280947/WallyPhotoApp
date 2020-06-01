@@ -8,23 +8,23 @@ import r.c.wallyphotoapp.api.UnsplashApi;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import static r.c.wallyphotoapp.utils.WallyConstants.BASE_URL;
+
 @Module
 public class NetworkModule {
 
     @Singleton
     @Provides
-    GsonConverterFactory getGsonConverterFactory(){
-        return GsonConverterFactory.create();
+    Retrofit providesRetrofitClient() {
+        return new Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(BASE_URL)
+                .build();
     }
 
     @Singleton
     @Provides
-    UnsplashApi getRestApiClient(Retrofit retrofit){
-         retrofit.newBuilder()
-                .addConverterFactory(getGsonConverterFactory())
-                .baseUrl("https://api.unsplash.com/")
-                .build();
-         return retrofit.create(UnsplashApi.class);
-
+    UnsplashApi provideUnsplashApi(Retrofit retrofit) {
+        return retrofit.create(UnsplashApi.class);
     }
 }

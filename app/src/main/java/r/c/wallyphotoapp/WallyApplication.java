@@ -4,6 +4,7 @@ import android.app.Application;
 
 import r.c.wallyphotoapp.di.components.AppComponent;
 import r.c.wallyphotoapp.di.components.DaggerAppComponent;
+import r.c.wallyphotoapp.di.modules.ContextModule;
 
 public class WallyApplication extends Application {
 
@@ -17,7 +18,8 @@ public class WallyApplication extends Application {
 
     public AppComponent getAppComponent(){
         if(appComponent == null){
-            appComponent = DaggerAppComponent.builder().build();
+            appComponent = DaggerAppComponent.builder().
+                    contextModule(new ContextModule(getApplicationContext())).build();
         }
         return appComponent;
     }

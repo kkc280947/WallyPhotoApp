@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">WallyPhotoApp</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="firebase_status_fmt">firebase_status_fmt</string>
+    <string name="text_invalid_otp">Invalid OTP.</string>
+    <string name="text_submit">Submit</string>
+    <string name="hint_enter_mobile_number">Enter Mobile Number</string>
+    <string name="hint_enter_otp">Enter OTP</string>
+    <string name="error_phone_number_empty">Phone number is empty</string>
+    <string name="error_text_number_not_valid">Please enter 10 digit valid number</string>
+    <string name="download">Download</string>
+    <string name="standard_text_that_swipes_up">Standard Text that swipes up</string>
+    <string name="fixed_text_which_swipes_from_left">Fixed text which swipes from left</string>
+    <string name="text_downloading_image">Downloading Image</string>
+    <string name="notification_text_download_complete">Image Download Complete</string>
+    <string name="notification_download_fail">Download Failed</string>
+    <string name="text_file_already_downloaded">File is already downloaded</string>
+    <string name="retry">Retry</string>
+    <string name="text_no_internet_connection">No Internet connection</string>
+    <string name="text_content_no_internet_connection">Please connect to wifi or mobile data to enjoy the app.</string>
+    <string name="save_data_to_firebase">Save data to Firebase</string>
+    <string name="lmn">LMN</string>
+    <string name="jhl">JHL</string>
+    <string name="ghi">GHI</string>
+    <string name="phone_number_from_firebase">Phone number from Firebase</string>
+    <string name="name_from_firebase">Name from Firebase</string>
+    <string name="log_out">Log out</string>
+    <string name="error_enter_name">Enter name</string>
+    <string name="error_empty_otp">OTP is empty.</string>
+    <string name="error_invalid_number">Invalid phone number.</string>
+    <string name="error_quota_exceeded">Quota exceeded.</string>
+    <string name="success_profile_update">Profile updated</string>
+    <string name="error_profile_update">Unable to update profile</string>
+    <string name="error_permission_denied">Permission Denied</string>
+    <integer name="grid_span_count">2</integer>
 </resources>
