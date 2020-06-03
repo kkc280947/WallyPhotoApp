@@ -14,12 +14,9 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import javax.inject.Inject;
-
 import r.c.wallyphotoapp.R;
 import r.c.wallyphotoapp.WallyApplication;
 import r.c.wallyphotoapp.base.BaseActivity;
-import r.c.wallyphotoapp.repository.datamodels.usermodel.User;
 import r.c.wallyphotoapp.ui.otp.OTPFragment;
 import r.c.wallyphotoapp.ui.photogallery.PhotoGalleryActivity;
 

@@ -131,13 +131,13 @@ public class PhotoGalleryFragment extends BaseCallbackFragment<PhotoGalleryViewM
     }
 
     /**
-     * Prepares the shared element transition to the pager fragment, as well as the other transitions
+     * Prepares the shared element transition to the fragment, as well as the other transitions
      * that affect the flow.
      */
     private void prepareTransitions() {
         setExitTransition(TransitionInflater.from(getContext())
                 .inflateTransition(R.transition.item_grid_exit_transition));
-        // A similar mapping is set at the ImagePagerFragment with a setEnterSharedElementCallback.
+        // A similar mapping is set at the PhotoDetailFragment with a setEnterSharedElementCallback.
         setExitSharedElementCallback(
                 new SharedElementCallback() {
                     @Override
